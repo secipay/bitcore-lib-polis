@@ -1,17 +1,17 @@
 {
-  "name": "bitcore-lib-dash",
-  "main": "./bitcore-lib-dash.min.js",
+  "name": "bitcore-lib-polis",
+  "main": "./bitcore-lib-polis.min.js",
   "version": "0.15.2",
-  "homepage": "https://github.com/dashevo/bitcore-lib-dash",
+  "homepage": "https://github.com/polisevo/bitcore-lib-polis",
   "authors": [
     "Dash", "BitPay, Inc."
   ],
-  "description": "A pure, powerful core for your dash project.",
+  "description": "A pure, powerful core for your polis project.",
   "moduleType": [
     "globals"
   ],
   "keywords": [
-    "dash",
+    "polis",
     "bitcoin",
     "bitcore",
     "btc",

@@ -1,5 +1,5 @@
 {
-  "name": "bitcore-lib-dash",
+  "name": "bitcore-lib-polis",
   "version": "0.15.2",
   "description": "A pure and powerful JavaScript Dash library.",
   "author": "BitPay <dev@bitpay.com>",
@@ -61,7 +61,7 @@
     },
     {
       "name": "Jon Kindel",
-      "email": "jon@dash.org"
+      "email": "jon@polis.org"
     },
     {
       "name": "Alex Werner",
@@ -69,7 +69,7 @@
     }
   ],
   "keywords": [
-    "dash",
+    "polis",
     "transaction",
     "address",
     "p2p",
@@ -86,12 +86,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dashevo/bitcore-lib-dash.git"
+    "url": "https://github.com/polispay/bitcore-lib-polis.git"
   },
   "bugs": {
-    "url": "https://github.com/dashevo/bitcore-lib-dash/issues"
+    "url": "https://github.com/polipay/bitcore-lib-polis/issues"
   },
-  "homepage": "https://github.com/dashevo/bitcore-lib-dash",
+  "homepage": "https://github.com/polispay/bitcore-lib-polis",
   "browser": {
     "request": "browser-request"
   },
@@ -106,7 +106,7 @@
     "x11-hash-js": "^1.0.0"
   },
   "devDependencies": {
-    "bitcore-build-dash": "dashevo/bitcore-build-dash",
+    "bitcore-build-polis": "polispay/bitcore-build-polis",
     "browserify": "latest",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",

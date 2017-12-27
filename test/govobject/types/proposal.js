@@ -4,7 +4,7 @@
 /* jshint latedef: false */
 var should = require('chai').should();
 var expect = require('chai').expect;
-var _ = require('lodash');
+var _ = require('lopolis');
 var sinon = require('sinon');
 
 var bitcore = require('../../..');
@@ -27,7 +27,7 @@ describe('Proposal', function() {
     payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
     payment_amount: 10,
     type: 1,
-    url: "http://www.dash.org"
+    url: "http://www.polis.org"
   };
   it('should create new proposal', function() {
     var proposal = new Proposal();
@@ -39,7 +39,7 @@ describe('Proposal', function() {
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.polis.org";
 
     proposal.serialize().should.equal(expectedHex);
   });
@@ -54,7 +54,7 @@ describe('Proposal', function() {
     proposal.payment_amount = 10;
     proposal.start_epoch = 'not a date'; // invalid date
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.polis.org";
 
     expect(function() {
       return proposal.serialize();
@@ -71,7 +71,7 @@ describe('Proposal', function() {
     proposal.payment_amount = 10;
     proposal.start_epoch = 1477872000;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.polis.org";
     var expectedErr = new errors.GovObject.Proposal.invalidDate();
     expect(proposal.getSerializationError().message).to.be.equal(expectedErr.message);
 
@@ -87,7 +87,7 @@ describe('Proposal', function() {
     proposal.payment_amount = 10;
     proposal.start_epoch = 1477872000;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.polis.org";
 
     expect(function() {
       return proposal.serialize();
@@ -108,7 +108,7 @@ describe('Proposal', function() {
     proposal.payment_amount = 10;
     proposal.start_epoch = start_epoch;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.polis.org";
 
     expect(function() {
       return proposal.serialize();
@@ -126,7 +126,7 @@ describe('Proposal', function() {
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.polis.org";
 
     expect(function() {
       return proposal.serialize();
@@ -144,7 +144,7 @@ describe('Proposal', function() {
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.polis.org";
 
     var proposal2 = new Proposal();
     proposal2.network = 'livenet';
@@ -154,7 +154,7 @@ describe('Proposal', function() {
     proposal2.payment_amount = 1625.487;
     proposal2.start_epoch = startDate;
     proposal2.type = 1;
-    proposal2.url = "https://www.dashcentral.org/p/Proposal-36-DashATM";
+    proposal2.url = "https://www.poliscentral.org/p/Proposal-36-DashATM";
 
     expect(function() {
       return proposal.serialize();
@@ -175,7 +175,7 @@ describe('Proposal', function() {
     proposal.payment_amount = '';
     proposal.start_epoch = startDate;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.polis.org";
 
     expect(function() {
       return proposal.serialize();
@@ -211,7 +211,7 @@ describe('Proposal', function() {
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.polis.org";
 
     expect(function() {
       return proposal.serialize();
@@ -226,7 +226,7 @@ describe('Proposal', function() {
       payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
       payment_amount: 10,
       type: 1,
-      url: "http://www.dash.org"
+      url: "http://www.polis.org"
     };
     var proposal = new Proposal();
     proposal = proposal.fromObject(jsonProposal);
@@ -243,7 +243,7 @@ describe('Proposal', function() {
       payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
       payment_amount: 10,
       type: 1,
-      url: "http://www.dash.org"
+      url: "http://www.polis.org"
     };
 
     var proposal = new Proposal();
@@ -280,7 +280,7 @@ describe('Proposal', function() {
       payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
       payment_amount: 10,
       type: 1,
-      url: "http://www.dash.org"
+      url: "http://www.polis.org"
     };
     var stringifiedJSON = JSON.stringify(jsonProposal);
     var proposal = new Proposal();
