@@ -2,7 +2,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 (function (Buffer){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var $ = require('./util/preconditions');
 var errors = require('./errors');
 var Base58Check = require('./encoding/base58check');
@@ -500,11 +500,11 @@ module.exports = Address;
 var Script = require('./script');
 
 }).call(this,require("buffer").Buffer)
-},{"./crypto/hash":8,"./encoding/base58check":13,"./errors":17,"./networks":24,"./publickey":27,"./script":28,"./util/js":46,"./util/preconditions":47,"buffer":117,"lopolis":191}],2:[function(require,module,exports){
+},{"./crypto/hash":8,"./encoding/base58check":13,"./errors":17,"./networks":24,"./publickey":27,"./script":28,"./util/js":46,"./util/preconditions":47,"buffer":117,"lodash":191}],2:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var BlockHeader = require('./blockheader');
 var BN = require('../crypto/bn');
 var BufferUtil = require('../util/buffer');
@@ -785,11 +785,11 @@ Block.Values = {
 module.exports = Block;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/bn":6,"../crypto/hash":8,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../transaction":31,"../util/buffer":45,"../util/preconditions":47,"./blockheader":3,"buffer":117,"lopolis":191}],3:[function(require,module,exports){
+},{"../crypto/bn":6,"../crypto/hash":8,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../transaction":31,"../util/buffer":45,"../util/preconditions":47,"./blockheader":3,"buffer":117,"lodash":191}],3:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var BN = require('../crypto/bn');
 var BufferUtil = require('../util/buffer');
 var BufferReader = require('../encoding/bufferreader');
@@ -1086,7 +1086,7 @@ BlockHeader.Constants = {
 module.exports = BlockHeader;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/bn":6,"../crypto/hash":8,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../util/buffer":45,"../util/js":46,"../util/preconditions":47,"buffer":117,"lopolis":191}],4:[function(require,module,exports){
+},{"../crypto/bn":6,"../crypto/hash":8,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../util/buffer":45,"../util/js":46,"../util/preconditions":47,"buffer":117,"lodash":191}],4:[function(require,module,exports){
 module.exports = require('./block');
 
 module.exports.BlockHeader = require('./blockheader');
@@ -1096,7 +1096,7 @@ module.exports.MerkleBlock = require('./merkleblock');
 (function (Buffer){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var BlockHeader = require('./blockheader');
 var BufferUtil = require('../util/buffer');
 var BufferReader = require('../encoding/bufferreader');
@@ -1368,13 +1368,13 @@ MerkleBlock.fromObject = function fromObject(obj) {
 module.exports = MerkleBlock;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/hash":8,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../transaction":31,"../util/buffer":45,"../util/js":46,"../util/preconditions":47,"./blockheader":3,"buffer":117,"lopolis":191}],6:[function(require,module,exports){
+},{"../crypto/hash":8,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../transaction":31,"../util/buffer":45,"../util/js":46,"../util/preconditions":47,"./blockheader":3,"buffer":117,"lodash":191}],6:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
 var BN = require('bn.js');
 var $ = require('../util/preconditions');
-var _ = require('lopolis');
+var _ = require('lodash');
 
 var reversebuf = function(buf) {
   var buf2 = new Buffer(buf.length);
@@ -1574,7 +1574,7 @@ BN.pad = function(buf, natlen, size) {
 module.exports = BN;
 
 }).call(this,require("buffer").Buffer)
-},{"../util/preconditions":47,"bn.js":66,"buffer":117,"lopolis":191}],7:[function(require,module,exports){
+},{"../util/preconditions":47,"bn.js":66,"buffer":117,"lodash":191}],7:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -1585,7 +1585,7 @@ var PublicKey = require('../publickey');
 var Random = require('./random');
 var Hash = require('./hash');
 var BufferUtil = require('../util/buffer');
-var _ = require('lopolis');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 
 var ECDSA = function ECDSA(obj) {
@@ -1874,7 +1874,7 @@ ECDSA.verify = function(hashbuf, sig, pubkey, endian) {
 module.exports = ECDSA;
 
 }).call(this,require("buffer").Buffer)
-},{"../publickey":27,"../util/buffer":45,"../util/preconditions":47,"./bn":6,"./hash":8,"./point":9,"./random":10,"./signature":11,"buffer":117,"lopolis":191}],8:[function(require,module,exports){
+},{"../publickey":27,"../util/buffer":45,"../util/preconditions":47,"./bn":6,"./hash":8,"./point":9,"./random":10,"./signature":11,"buffer":117,"lodash":191}],8:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -2185,7 +2185,7 @@ module.exports = Random;
 'use strict';
 
 var BN = require('./bn');
-var _ = require('lopolis');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var BufferUtil = require('../util/buffer');
 var JSUtil = require('../util/js');
@@ -2496,11 +2496,11 @@ Signature.SIGHASH_ANYONECANPAY = 0x80;
 module.exports = Signature;
 
 }).call(this,require("buffer").Buffer)
-},{"../util/buffer":45,"../util/js":46,"../util/preconditions":47,"./bn":6,"buffer":117,"lopolis":191}],12:[function(require,module,exports){
+},{"../util/buffer":45,"../util/js":46,"../util/preconditions":47,"./bn":6,"buffer":117,"lodash":191}],12:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var bs58 = require('bs58');
 var buffer = require('buffer');
 
@@ -2570,11 +2570,11 @@ Base58.prototype.toString = function() {
 module.exports = Base58;
 
 }).call(this,require("buffer").Buffer)
-},{"bs58":114,"buffer":117,"lopolis":191}],13:[function(require,module,exports){
+},{"bs58":114,"buffer":117,"lodash":191}],13:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var Base58 = require('./base58');
 var buffer = require('buffer');
 var sha256sha256 = require('../crypto/hash').sha256sha256;
@@ -2669,11 +2669,11 @@ Base58Check.prototype.toString = function() {
 module.exports = Base58Check;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/hash":8,"./base58":12,"buffer":117,"lopolis":191}],14:[function(require,module,exports){
+},{"../crypto/hash":8,"./base58":12,"buffer":117,"lodash":191}],14:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var BufferUtil = require('../util/buffer');
 var BN = require('../crypto/bn');
@@ -2871,7 +2871,7 @@ BufferReader.prototype.readReverse = function(len) {
 module.exports = BufferReader;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/bn":6,"../util/buffer":45,"../util/preconditions":47,"buffer":117,"lopolis":191}],15:[function(require,module,exports){
+},{"../crypto/bn":6,"../util/buffer":45,"../util/preconditions":47,"buffer":117,"lodash":191}],15:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -3105,7 +3105,7 @@ module.exports = Varint;
 },{"../crypto/bn":6,"./bufferreader":14,"./bufferwriter":15,"buffer":117}],17:[function(require,module,exports){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 
 function format(message, args) {
   return message
@@ -3165,7 +3165,7 @@ module.exports.extend = function(spec) {
   return traverseNode(bitcore.Error, spec);
 };
 
-},{"./spec":18,"lopolis":191}],18:[function(require,module,exports){
+},{"./spec":18,"lodash":191}],18:[function(require,module,exports){
 'use strict';
 
 var docsURL = 'http://bitcore.io/';
@@ -3379,7 +3379,7 @@ module.exports = [{
 (function (Buffer){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var buffer = require('buffer');
 var compare = Buffer.compare || require('buffer-compare');
@@ -3585,7 +3585,7 @@ GovObject.shallowCopy = function(govObject) {
 module.exports = GovObject;
 
 }).call(this,require("buffer").Buffer)
-},{"../address":1,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../errors":17,"../util/buffer":45,"../util/js":46,"../util/preconditions":47,"buffer":117,"buffer-compare":115,"lopolis":191}],20:[function(require,module,exports){
+},{"../address":1,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../errors":17,"../util/buffer":45,"../util/js":46,"../util/preconditions":47,"buffer":117,"buffer-compare":115,"lodash":191}],20:[function(require,module,exports){
 module.exports = require('./govobject');
 
 module.exports.Proposal = require('./types/proposal');
@@ -3593,7 +3593,7 @@ module.exports.Proposal = require('./types/proposal');
 },{"./govobject":19,"./types/proposal":21}],21:[function(require,module,exports){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var $ = require('../../util/preconditions');
 var GovObject = require('../govobject');
 var errors = require('../../errors');
@@ -3761,14 +3761,14 @@ Proposal.prototype.getSerializationError = function(opts) {
 
 module.exports = Proposal;
 
-},{"../../errors":17,"../../util/preconditions":47,"../govobject":19,"lopolis":191,"util":259}],22:[function(require,module,exports){
+},{"../../errors":17,"../../util/preconditions":47,"../govobject":19,"lodash":191,"util":259}],22:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
 
 var assert = require('assert');
 var buffer = require('buffer');
-var _ = require('lopolis');
+var _ = require('lodash');
 var $ = require('./util/preconditions');
 
 var BN = require('./crypto/bn');
@@ -4411,11 +4411,11 @@ assert(HDPrivateKey.ChecksumEnd === HDPrivateKey.SerializedByteSize);
 module.exports = HDPrivateKey;
 
 }).call(this,require("buffer").Buffer)
-},{"./crypto/bn":6,"./crypto/hash":8,"./crypto/point":9,"./crypto/random":10,"./encoding/base58":12,"./encoding/base58check":13,"./errors":17,"./hdpublickey":23,"./networks":24,"./privatekey":26,"./util/buffer":45,"./util/js":46,"./util/preconditions":47,"assert":63,"buffer":117,"lopolis":191}],23:[function(require,module,exports){
+},{"./crypto/bn":6,"./crypto/hash":8,"./crypto/point":9,"./crypto/random":10,"./encoding/base58":12,"./encoding/base58check":13,"./errors":17,"./hdpublickey":23,"./networks":24,"./privatekey":26,"./util/buffer":45,"./util/js":46,"./util/preconditions":47,"assert":63,"buffer":117,"lodash":191}],23:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var $ = require('./util/preconditions');
 
 var BN = require('./crypto/bn');
@@ -4911,9 +4911,9 @@ assert(HDPublicKey.ChecksumEnd === HDPublicKey.SerializedByteSize);
 module.exports = HDPublicKey;
 
 }).call(this,require("buffer").Buffer)
-},{"./crypto/bn":6,"./crypto/hash":8,"./crypto/point":9,"./encoding/base58":12,"./encoding/base58check":13,"./errors":17,"./hdprivatekey":22,"./networks":24,"./publickey":27,"./util/buffer":45,"./util/js":46,"./util/preconditions":47,"assert":63,"buffer":117,"lopolis":191}],24:[function(require,module,exports){
+},{"./crypto/bn":6,"./crypto/hash":8,"./crypto/point":9,"./encoding/base58":12,"./encoding/base58check":13,"./errors":17,"./hdprivatekey":22,"./networks":24,"./publickey":27,"./util/buffer":45,"./util/js":46,"./util/preconditions":47,"assert":63,"buffer":117,"lodash":191}],24:[function(require,module,exports){
 'use strict';
-var _ = require('lopolis');
+var _ = require('lodash');
 
 var BufferUtil = require('./util/buffer');
 var JSUtil = require('./util/js');
@@ -5179,11 +5179,11 @@ module.exports = {
   disableRegtest: disableRegtest
 };
 
-},{"./util/buffer":45,"./util/js":46,"lopolis":191}],25:[function(require,module,exports){
+},{"./util/buffer":45,"./util/js":46,"lodash":191}],25:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var $ = require('./util/preconditions');
 var BufferUtil = require('./util/buffer');
 var JSUtil = require('./util/js');
@@ -5431,11 +5431,11 @@ Opcode.prototype.inspect = function() {
 module.exports = Opcode;
 
 }).call(this,require("buffer").Buffer)
-},{"./util/buffer":45,"./util/js":46,"./util/preconditions":47,"buffer":117,"lopolis":191}],26:[function(require,module,exports){
+},{"./util/buffer":45,"./util/js":46,"./util/preconditions":47,"buffer":117,"lodash":191}],26:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var Address = require('./address');
 var Base58Check = require('./encoding/base58check');
 var BN = require('./crypto/bn');
@@ -5835,7 +5835,7 @@ PrivateKey.prototype.inspect = function() {
 module.exports = PrivateKey;
 
 }).call(this,require("buffer").Buffer)
-},{"./address":1,"./crypto/bn":6,"./crypto/point":9,"./crypto/random":10,"./encoding/base58check":13,"./networks":24,"./publickey":27,"./util/js":46,"./util/preconditions":47,"buffer":117,"lopolis":191}],27:[function(require,module,exports){
+},{"./address":1,"./crypto/bn":6,"./crypto/point":9,"./crypto/random":10,"./encoding/base58check":13,"./networks":24,"./publickey":27,"./util/js":46,"./util/preconditions":47,"buffer":117,"lodash":191}],27:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -5844,7 +5844,7 @@ var Point = require('./crypto/point');
 var Hash = require('./crypto/hash');
 var JSUtil = require('./util/js');
 var Network = require('./networks');
-var _ = require('lopolis');
+var _ = require('lodash');
 var $ = require('./util/preconditions');
 
 /**
@@ -6232,7 +6232,7 @@ PublicKey.prototype.inspect = function() {
 module.exports = PublicKey;
 
 }).call(this,require("buffer").Buffer)
-},{"./address":1,"./crypto/bn":6,"./crypto/hash":8,"./crypto/point":9,"./networks":24,"./privatekey":26,"./util/js":46,"./util/preconditions":47,"buffer":117,"lopolis":191}],28:[function(require,module,exports){
+},{"./address":1,"./crypto/bn":6,"./crypto/hash":8,"./crypto/point":9,"./networks":24,"./privatekey":26,"./util/js":46,"./util/preconditions":47,"buffer":117,"lodash":191}],28:[function(require,module,exports){
 module.exports = require('./script');
 
 module.exports.Interpreter = require('./interpreter');
@@ -6241,7 +6241,7 @@ module.exports.Interpreter = require('./interpreter');
 (function (Buffer){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 
 var Script = require('./script');
 var Opcode = require('../opcode');
@@ -7506,7 +7506,7 @@ Interpreter.prototype.step = function() {
 
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/bn":6,"../crypto/hash":8,"../crypto/signature":11,"../opcode":25,"../publickey":27,"../transaction":31,"./script":30,"buffer":117,"lopolis":191}],30:[function(require,module,exports){
+},{"../crypto/bn":6,"../crypto/hash":8,"../crypto/signature":11,"../opcode":25,"../publickey":27,"../transaction":31,"./script":30,"buffer":117,"lodash":191}],30:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -7519,7 +7519,7 @@ var PublicKey = require('../publickey');
 var Signature = require('../crypto/signature');
 var Networks = require('../networks');
 var $ = require('../util/preconditions');
-var _ = require('lopolis');
+var _ = require('lodash');
 var errors = require('../errors');
 var buffer = require('buffer');
 var BufferUtil = require('../util/buffer');
@@ -8594,7 +8594,7 @@ Script.prototype.getSignatureOperationsCount = function(accurate) {
 module.exports = Script;
 
 }).call(this,require("buffer").Buffer)
-},{"../address":1,"../crypto/hash":8,"../crypto/signature":11,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../errors":17,"../networks":24,"../opcode":25,"../publickey":27,"../util/buffer":45,"../util/js":46,"../util/preconditions":47,"buffer":117,"lopolis":191}],31:[function(require,module,exports){
+},{"../address":1,"../crypto/hash":8,"../crypto/signature":11,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../errors":17,"../networks":24,"../opcode":25,"../publickey":27,"../util/buffer":45,"../util/js":46,"../util/preconditions":47,"buffer":117,"lodash":191}],31:[function(require,module,exports){
 module.exports = require('./transaction');
 
 module.exports.Input = require('./input');
@@ -8614,7 +8614,7 @@ module.exports.MultiSigScriptHash = require('./multisigscripthash.js');
 },{"./input":33,"./multisig.js":34,"./multisigscripthash.js":35,"./publickey":36,"./publickeyhash":37}],33:[function(require,module,exports){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var $ = require('../../util/preconditions');
 var errors = require('../../errors');
 var BufferWriter = require('../../encoding/bufferwriter');
@@ -8809,10 +8809,10 @@ Input.prototype._estimateSize = function() {
 
 module.exports = Input;
 
-},{"../../encoding/bufferwriter":15,"../../errors":17,"../../script":28,"../../util/buffer":45,"../../util/js":46,"../../util/preconditions":47,"../output":38,"../sighash":39,"buffer":117,"lopolis":191}],34:[function(require,module,exports){
+},{"../../encoding/bufferwriter":15,"../../errors":17,"../../script":28,"../../util/buffer":45,"../../util/js":46,"../../util/preconditions":47,"../output":38,"../sighash":39,"buffer":117,"lodash":191}],34:[function(require,module,exports){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var inherits = require('inherits');
 var Transaction = require('../transaction');
 var Input = require('./input');
@@ -9022,10 +9022,10 @@ MultiSigInput.prototype._estimateSize = function() {
 
 module.exports = MultiSigInput;
 
-},{"../../crypto/signature":11,"../../publickey":27,"../../script":28,"../../util/buffer":45,"../../util/preconditions":47,"../output":38,"../sighash":39,"../signature":40,"../transaction":41,"./input":33,"inherits":188,"lopolis":191}],35:[function(require,module,exports){
+},{"../../crypto/signature":11,"../../publickey":27,"../../script":28,"../../util/buffer":45,"../../util/preconditions":47,"../output":38,"../sighash":39,"../signature":40,"../transaction":41,"./input":33,"inherits":188,"lodash":191}],35:[function(require,module,exports){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var inherits = require('inherits');
 var Input = require('./input');
 var Output = require('../output');
@@ -9190,7 +9190,7 @@ MultiSigScriptHashInput.prototype._estimateSize = function() {
 
 module.exports = MultiSigScriptHashInput;
 
-},{"../../crypto/signature":11,"../../publickey":27,"../../script":28,"../../util/buffer":45,"../../util/preconditions":47,"../output":38,"../sighash":39,"../signature":40,"./input":33,"inherits":188,"lopolis":191}],36:[function(require,module,exports){
+},{"../../crypto/signature":11,"../../publickey":27,"../../script":28,"../../util/buffer":45,"../../util/preconditions":47,"../output":38,"../sighash":39,"../signature":40,"./input":33,"inherits":188,"lodash":191}],36:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -9381,7 +9381,7 @@ module.exports = PublicKeyHashInput;
 },{"../../crypto/hash":8,"../../crypto/signature":11,"../../script":28,"../../util/buffer":45,"../../util/preconditions":47,"../output":38,"../sighash":39,"../signature":40,"./input":33,"inherits":188}],38:[function(require,module,exports){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var BN = require('../crypto/bn');
 var buffer = require('buffer');
 var bufferUtil = require('../util/buffer');
@@ -9548,7 +9548,7 @@ Output.prototype.toBufferWriter = function(writer) {
 
 module.exports = Output;
 
-},{"../crypto/bn":6,"../encoding/bufferwriter":15,"../errors":17,"../script":28,"../util/buffer":45,"../util/js":46,"../util/preconditions":47,"buffer":117,"lopolis":191}],39:[function(require,module,exports){
+},{"../crypto/bn":6,"../encoding/bufferwriter":15,"../errors":17,"../script":28,"../util/buffer":45,"../util/js":46,"../util/preconditions":47,"buffer":117,"lodash":191}],39:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -9563,7 +9563,7 @@ var BN = require('../crypto/bn');
 var Hash = require('../crypto/hash');
 var ECDSA = require('../crypto/ecdsa');
 var $ = require('../util/preconditions');
-var _ = require('lopolis');
+var _ = require('lodash');
 
 var SIGHASH_SINGLE_BUG = '0000000000000000000000000000000000000000000000000000000000000001';
 var BITS_64_ON = 'ffffffffffffffff';
@@ -9688,11 +9688,11 @@ module.exports = {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/bn":6,"../crypto/ecdsa":7,"../crypto/hash":8,"../crypto/signature":11,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../script":28,"../util/preconditions":47,"./input":32,"./output":38,"./transaction":41,"buffer":117,"lopolis":191}],40:[function(require,module,exports){
+},{"../crypto/bn":6,"../crypto/ecdsa":7,"../crypto/hash":8,"../crypto/signature":11,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../script":28,"../util/preconditions":47,"./input":32,"./output":38,"./transaction":41,"buffer":117,"lodash":191}],40:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var inherits = require('inherits');
 var BufferUtil = require('../util/buffer');
@@ -9781,11 +9781,11 @@ TransactionSignature.fromObject = function(object) {
 module.exports = TransactionSignature;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/signature":11,"../errors":17,"../publickey":27,"../util/buffer":45,"../util/js":46,"../util/preconditions":47,"buffer":117,"inherits":188,"lopolis":191}],41:[function(require,module,exports){
+},{"../crypto/signature":11,"../errors":17,"../publickey":27,"../util/buffer":45,"../util/js":46,"../util/preconditions":47,"buffer":117,"inherits":188,"lodash":191}],41:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var buffer = require('buffer');
 var compare = Buffer.compare || require('buffer-compare');
@@ -10752,7 +10752,7 @@ Transaction.prototype.sort = function() {
 
 /**
  * Randomize this transaction's outputs ordering. The shuffling algorithm is a
- * version of the Fisher-Yates shuffle, provided by lopolis's _.shuffle().
+ * version of the Fisher-Yates shuffle, provided by lodash's _.shuffle().
  *
  * @return {Transaction} this
  */
@@ -11015,10 +11015,10 @@ Transaction.prototype.enableRBF = function() {
 module.exports = Transaction;
 
 }).call(this,require("buffer").Buffer)
-},{"../address":1,"../crypto/bn":6,"../crypto/hash":8,"../crypto/signature":11,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../errors":17,"../privatekey":26,"../script":28,"../util/buffer":45,"../util/js":46,"../util/preconditions":47,"./input":32,"./output":38,"./sighash":39,"./unspentoutput":42,"buffer":117,"buffer-compare":115,"lopolis":191}],42:[function(require,module,exports){
+},{"../address":1,"../crypto/bn":6,"../crypto/hash":8,"../crypto/signature":11,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../errors":17,"../privatekey":26,"../script":28,"../util/buffer":45,"../util/js":46,"../util/preconditions":47,"./input":32,"./output":38,"./sighash":39,"./unspentoutput":42,"buffer":117,"buffer-compare":115,"lodash":191}],42:[function(require,module,exports){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var JSUtil = require('../util/js');
 
@@ -11117,10 +11117,10 @@ UnspentOutput.prototype.toObject = UnspentOutput.prototype.toJSON = function toO
 
 module.exports = UnspentOutput;
 
-},{"../address":1,"../script":28,"../unit":43,"../util/js":46,"../util/preconditions":47,"lopolis":191}],43:[function(require,module,exports){
+},{"../address":1,"../script":28,"../unit":43,"../util/js":46,"../util/preconditions":47,"lodash":191}],43:[function(require,module,exports){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 
 var errors = require('./errors');
 var $ = require('./util/preconditions');
@@ -11357,10 +11357,10 @@ Unit.prototype.inspect = function() {
 
 module.exports = Unit;
 
-},{"./errors":17,"./util/preconditions":47,"lopolis":191}],44:[function(require,module,exports){
+},{"./errors":17,"./util/preconditions":47,"lodash":191}],44:[function(require,module,exports){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 var URL = require('url');
 
 var Address = require('./address');
@@ -11582,7 +11582,7 @@ URI.prototype.inspect = function() {
 
 module.exports = URI;
 
-},{"./address":1,"./unit":43,"lopolis":191,"url":255}],45:[function(require,module,exports){
+},{"./address":1,"./unit":43,"lodash":191,"url":255}],45:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -11766,7 +11766,7 @@ module.exports.EMPTY_BUFFER = new Buffer(0);
 },{"./js":46,"./preconditions":47,"assert":63,"buffer":117}],46:[function(require,module,exports){
 'use strict';
 
-var _ = require('lopolis');
+var _ = require('lodash');
 
 /**
  * Determines whether a string contains only hexadecimal values
@@ -11849,11 +11849,11 @@ module.exports = {
   }
 };
 
-},{"lopolis":191}],47:[function(require,module,exports){
+},{"lodash":191}],47:[function(require,module,exports){
 'use strict';
 
 var errors = require('../errors');
-var _ = require('lopolis');
+var _ = require('lodash');
 
 module.exports = {
   checkState: function(condition, message) {
@@ -11885,7 +11885,7 @@ module.exports = {
   }
 };
 
-},{"../errors":17,"buffer":117,"lopolis":191}],48:[function(require,module,exports){
+},{"../errors":17,"buffer":117,"lodash":191}],48:[function(require,module,exports){
 var asn1 = exports;
 
 asn1.bignum = require('bn.js');
@@ -34450,9 +34450,9 @@ module.exports = Array.isArray || function (arr) {
 (function (global){
 /**
  * @license
- * Lopolis <https://lopolis.com/>
+ * Lopolis <https://lodash.com/>
  * Copyright JS Foundation and other contributors <https://js.foundation/>
- * Released under MIT license <https://lopolis.com/license>
+ * Released under MIT license <https://lodash.com/license>
  * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
  * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  */
@@ -34472,13 +34472,13 @@ module.exports = Array.isArray || function (arr) {
       FUNC_ERROR_TEXT = 'Expected a function';
 
   /** Used to stand-in for `undefined` hash values. */
-  var HASH_UNDEFINED = '__lopolis_hash_undefined__';
+  var HASH_UNDEFINED = '__lodash_hash_undefined__';
 
   /** Used as the maximum memoize cache size. */
   var MAX_MEMOIZE_SIZE = 500;
 
   /** Used as the internal argument placeholder. */
-  var PLACEHOLDER = '__lopolis_placeholder__';
+  var PLACEHOLDER = '__lodash_placeholder__';
 
   /** Used to compose bitmasks for cloning. */
   var CLONE_DEEP_FLAG = 1,
@@ -35846,29 +35846,29 @@ module.exports = Array.isArray || function (arr) {
   /*--------------------------------------------------------------------------*/
 
   /**
-   * Create a new pristine `lopolis` function using the `context` object.
+   * Create a new pristine `lodash` function using the `context` object.
    *
    * @static
    * @memberOf _
    * @since 1.1.0
    * @category Util
    * @param {Object} [context=root] The context object.
-   * @returns {Function} Returns a new `lopolis` function.
+   * @returns {Function} Returns a new `lodash` function.
    * @example
    *
    * _.mixin({ 'foo': _.constant('foo') });
    *
-   * var lopolis = _.runInContext();
-   * lopolis.mixin({ 'bar': lopolis.constant('bar') });
+   * var lodash = _.runInContext();
+   * lodash.mixin({ 'bar': lodash.constant('bar') });
    *
    * _.isFunction(_.foo);
    * // => true
    * _.isFunction(_.bar);
    * // => false
    *
-   * lopolis.isFunction(lopolis.foo);
+   * lodash.isFunction(lodash.foo);
    * // => false
-   * lopolis.isFunction(lopolis.bar);
+   * lodash.isFunction(lodash.bar);
    * // => true
    *
    * // Create a suped-up `defer` in Node.js.
@@ -35956,7 +35956,7 @@ module.exports = Array.isArray || function (arr) {
         ctxNow = Date && Date.now !== root.Date.now && Date.now,
         ctxSetTimeout = context.setTimeout !== root.setTimeout && context.setTimeout;
 
-    /* Built-in method references for those with the same name as other `lopolis` methods. */
+    /* Built-in method references for those with the same name as other `lodash` methods. */
     var nativeCeil = Math.ceil,
         nativeFloor = Math.floor,
         nativeGetSymbols = Object.getOwnPropertySymbols,
@@ -36000,7 +36000,7 @@ module.exports = Array.isArray || function (arr) {
     /*------------------------------------------------------------------------*/
 
     /**
-     * Creates a `lopolis` object which wraps `value` to enable implicit method
+     * Creates a `lodash` object which wraps `value` to enable implicit method
      * chain sequences. Methods that operate on and return arrays, collections,
      * and functions can be chained together. Methods that retrieve a single value
      * or may return a primitive value will automatically end the chain sequence
@@ -36024,7 +36024,7 @@ module.exports = Array.isArray || function (arr) {
      * Chaining is supported in custom builds as long as the `_#value` method is
      * directly or indirectly included in the build.
      *
-     * In addition to lopolis methods, wrappers have `Array` and `String` methods.
+     * In addition to lodash methods, wrappers have `Array` and `String` methods.
      *
      * The wrapper `Array` methods are:
      * `concat`, `join`, `pop`, `push`, `shift`, `sort`, `splice`, and `unshift`
@@ -36093,8 +36093,8 @@ module.exports = Array.isArray || function (arr) {
      * @name _
      * @constructor
      * @category Seq
-     * @param {*} value The value to wrap in a `lopolis` instance.
-     * @returns {Object} Returns the new `lopolis` wrapper instance.
+     * @param {*} value The value to wrap in a `lodash` instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * function square(n) {
@@ -36116,7 +36116,7 @@ module.exports = Array.isArray || function (arr) {
      * _.isArray(squares.value());
      * // => true
      */
-    function lopolis(value) {
+    function lodash(value) {
       if (isObjectLike(value) && !isArray(value) && !(value instanceof LazyWrapper)) {
         if (value instanceof LopolisWrapper) {
           return value;
@@ -36162,7 +36162,7 @@ module.exports = Array.isArray || function (arr) {
     }
 
     /**
-     * The base constructor for creating `lopolis` wrapper objects.
+     * The base constructor for creating `lodash` wrapper objects.
      *
      * @private
      * @param {*} value The value to wrap.
@@ -36177,7 +36177,7 @@ module.exports = Array.isArray || function (arr) {
     }
 
     /**
-     * By default, the template delimiters used by lopolis are like those in
+     * By default, the template delimiters used by lodash are like those in
      * embedded Ruby (ERB). Change the following template settings to use
      * alternative delimiters.
      *
@@ -36185,7 +36185,7 @@ module.exports = Array.isArray || function (arr) {
      * @memberOf _
      * @type {Object}
      */
-    lopolis.templateSettings = {
+    lodash.templateSettings = {
 
       /**
        * Used to detect `data` property values to be HTML-escaped.
@@ -36228,18 +36228,18 @@ module.exports = Array.isArray || function (arr) {
       'imports': {
 
         /**
-         * A reference to the `lopolis` function.
+         * A reference to the `lodash` function.
          *
          * @memberOf _.templateSettings.imports
          * @type {Function}
          */
-        '_': lopolis
+        '_': lodash
       }
     };
 
     // Ensure wrappers are instances of `baseLopolis`.
-    lopolis.prototype = baseLopolis.prototype;
-    lopolis.prototype.constructor = lopolis;
+    lodash.prototype = baseLopolis.prototype;
+    lodash.prototype.constructor = lodash;
 
     LopolisWrapper.prototype = baseCreate(baseLopolis.prototype);
     LopolisWrapper.prototype.constructor = LopolisWrapper;
@@ -40371,7 +40371,7 @@ module.exports = Array.isArray || function (arr) {
      * @returns {*} Returns the placeholder value.
      */
     function getHolder(func) {
-      var object = hasOwnProperty.call(lopolis, 'placeholder') ? lopolis : func;
+      var object = hasOwnProperty.call(lodash, 'placeholder') ? lodash : func;
       return object.placeholder;
     }
 
@@ -40387,7 +40387,7 @@ module.exports = Array.isArray || function (arr) {
      * @returns {Function} Returns the chosen function or its result.
      */
     function getIteratee() {
-      var result = lopolis.iteratee || iteratee;
+      var result = lodash.iteratee || iteratee;
       result = result === iteratee ? baseIteratee : result;
       return arguments.length ? result(arguments[0], arguments[1]) : result;
     }
@@ -40792,7 +40792,7 @@ module.exports = Array.isArray || function (arr) {
      */
     function isLaziable(func) {
       var funcName = getFuncName(func),
-          other = lopolis[funcName];
+          other = lodash[funcName];
 
       if (typeof other != 'function' || !(funcName in LazyWrapper.prototype)) {
         return false;
@@ -43165,7 +43165,7 @@ module.exports = Array.isArray || function (arr) {
     /*------------------------------------------------------------------------*/
 
     /**
-     * Creates a `lopolis` wrapper instance that wraps `value` with explicit method
+     * Creates a `lodash` wrapper instance that wraps `value` with explicit method
      * chain sequences enabled. The result of such sequences must be unwrapped
      * with `_#value`.
      *
@@ -43174,7 +43174,7 @@ module.exports = Array.isArray || function (arr) {
      * @since 1.3.0
      * @category Seq
      * @param {*} value The value to wrap.
-     * @returns {Object} Returns the new `lopolis` wrapper instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * var users = [
@@ -43194,7 +43194,7 @@ module.exports = Array.isArray || function (arr) {
      * // => 'pebbles is 1'
      */
     function chain(value) {
-      var result = lopolis(value);
+      var result = lodash(value);
       result.__chain__ = true;
       return result;
     }
@@ -43262,7 +43262,7 @@ module.exports = Array.isArray || function (arr) {
      * @since 1.0.0
      * @category Seq
      * @param {...(string|string[])} [paths] The property paths to pick.
-     * @returns {Object} Returns the new `lopolis` wrapper instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * var object = { 'a': [{ 'b': { 'c': 3 } }, 4] };
@@ -43295,13 +43295,13 @@ module.exports = Array.isArray || function (arr) {
     });
 
     /**
-     * Creates a `lopolis` wrapper instance with explicit method chain sequences enabled.
+     * Creates a `lodash` wrapper instance with explicit method chain sequences enabled.
      *
      * @name chain
      * @memberOf _
      * @since 0.1.0
      * @category Seq
-     * @returns {Object} Returns the new `lopolis` wrapper instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * var users = [
@@ -43332,7 +43332,7 @@ module.exports = Array.isArray || function (arr) {
      * @memberOf _
      * @since 3.2.0
      * @category Seq
-     * @returns {Object} Returns the new `lopolis` wrapper instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * var array = [1, 2];
@@ -43417,7 +43417,7 @@ module.exports = Array.isArray || function (arr) {
      * @since 3.2.0
      * @category Seq
      * @param {*} value The value to plant.
-     * @returns {Object} Returns the new `lopolis` wrapper instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * function square(n) {
@@ -43462,7 +43462,7 @@ module.exports = Array.isArray || function (arr) {
      * @memberOf _
      * @since 0.1.0
      * @category Seq
-     * @returns {Object} Returns the new `lopolis` wrapper instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * var array = [1, 2, 3];
@@ -43971,7 +43971,7 @@ module.exports = Array.isArray || function (arr) {
      * `iteratee`. The iteratee is invoked with three arguments:
      * (value, index|key, collection).
      *
-     * Many lopolis methods are guarded to work as iteratees for methods like
+     * Many lodash methods are guarded to work as iteratees for methods like
      * `_.every`, `_.filter`, `_.map`, `_.mapValues`, `_.reject`, and `_.some`.
      *
      * The guarded methods are:
@@ -44104,7 +44104,7 @@ module.exports = Array.isArray || function (arr) {
      * value. The iteratee is invoked with four arguments:
      * (accumulator, value, index|key, collection).
      *
-     * Many lopolis methods are guarded to work as iteratees for methods like
+     * Many lodash methods are guarded to work as iteratees for methods like
      * `_.reduce`, `_.reduceRight`, and `_.transform`.
      *
      * The guarded methods are:
@@ -48689,8 +48689,8 @@ module.exports = Array.isArray || function (arr) {
      * @returns {string} Returns the escaped string.
      * @example
      *
-     * _.escapeRegExp('[lopolis](https://lopolis.com/)');
-     * // => '\[lopolis\]\(https://lopolis\.com/\)'
+     * _.escapeRegExp('[lodash](https://lodash.com/)');
+     * // => '\[lodash\]\(https://lodash\.com/\)'
      */
     function escapeRegExp(string) {
       string = toString(string);
@@ -49094,7 +49094,7 @@ module.exports = Array.isArray || function (arr) {
      * for easier debugging.
      *
      * For more information on precompiling templates see
-     * [lopolis's custom builds documentation](https://lopolis.com/custom-builds).
+     * [lodash's custom builds documentation](https://lodash.com/custom-builds).
      *
      * For more information on Chrome extension sandboxes see
      * [Chrome's extensions documentation](https://developer.chrome.com/extensions/sandboxingEval).
@@ -49113,7 +49113,7 @@ module.exports = Array.isArray || function (arr) {
      *  An object to import into the template as free variables.
      * @param {RegExp} [options.interpolate=_.templateSettings.interpolate]
      *  The "interpolate" delimiter.
-     * @param {string} [options.sourceURL='lopolis.templateSources[n]']
+     * @param {string} [options.sourceURL='lodash.templateSources[n]']
      *  The sourceURL of the compiled template.
      * @param {string} [options.variable='obj']
      *  The data object variable name.
@@ -49190,7 +49190,7 @@ module.exports = Array.isArray || function (arr) {
       // Based on John Resig's `tmpl` implementation
       // (http://ejohn.org/blog/javascript-micro-templating/)
       // and Laura Doktorova's doT.js (https://github.com/olado/doT).
-      var settings = lopolis.templateSettings;
+      var settings = lodash.templateSettings;
 
       if (guard && isIterateeCall(string, options, guard)) {
         options = undefined;
@@ -49220,7 +49220,7 @@ module.exports = Array.isArray || function (arr) {
       var sourceURL = '//# sourceURL=' +
         ('sourceURL' in options
           ? options.sourceURL
-          : ('lopolis.templateSources[' + (++templateCounter) + ']')
+          : ('lodash.templateSources[' + (++templateCounter) + ']')
         ) + '\n';
 
       string.replace(reDelimiters, function(match, escapeValue, interpolateValue, esTemplateValue, evaluateValue, offset) {
@@ -50072,14 +50072,14 @@ module.exports = Array.isArray || function (arr) {
      * object to the destination object. If `object` is a function, then methods
      * are added to its prototype as well.
      *
-     * **Note:** Use `_.runInContext` to create a pristine `lopolis` function to
+     * **Note:** Use `_.runInContext` to create a pristine `lodash` function to
      * avoid conflicts caused by modifying the original.
      *
      * @static
      * @since 0.1.0
      * @memberOf _
      * @category Util
-     * @param {Function|Object} [object=lopolis] The destination object.
+     * @param {Function|Object} [object=lodash] The destination object.
      * @param {Object} source The object of functions to add.
      * @param {Object} [options={}] The options object.
      * @param {boolean} [options.chain=true] Specify whether mixins are chainable.
@@ -50141,16 +50141,16 @@ module.exports = Array.isArray || function (arr) {
 
     /**
      * Reverts the `_` variable to its previous value and returns a reference to
-     * the `lopolis` function.
+     * the `lodash` function.
      *
      * @static
      * @since 0.1.0
      * @memberOf _
      * @category Util
-     * @returns {Function} Returns the `lopolis` function.
+     * @returns {Function} Returns the `lodash` function.
      * @example
      *
-     * var lopolis = _.noConflict();
+     * var lodash = _.noConflict();
      */
     function noConflict() {
       if (root._ === this) {
@@ -50936,327 +50936,327 @@ module.exports = Array.isArray || function (arr) {
     /*------------------------------------------------------------------------*/
 
     // Add methods that return wrapped values in chain sequences.
-    lopolis.after = after;
-    lopolis.ary = ary;
-    lopolis.assign = assign;
-    lopolis.assignIn = assignIn;
-    lopolis.assignInWith = assignInWith;
-    lopolis.assignWith = assignWith;
-    lopolis.at = at;
-    lopolis.before = before;
-    lopolis.bind = bind;
-    lopolis.bindAll = bindAll;
-    lopolis.bindKey = bindKey;
-    lopolis.castArray = castArray;
-    lopolis.chain = chain;
-    lopolis.chunk = chunk;
-    lopolis.compact = compact;
-    lopolis.concat = concat;
-    lopolis.cond = cond;
-    lopolis.conforms = conforms;
-    lopolis.constant = constant;
-    lopolis.countBy = countBy;
-    lopolis.create = create;
-    lopolis.curry = curry;
-    lopolis.curryRight = curryRight;
-    lopolis.debounce = debounce;
-    lopolis.defaults = defaults;
-    lopolis.defaultsDeep = defaultsDeep;
-    lopolis.defer = defer;
-    lopolis.delay = delay;
-    lopolis.difference = difference;
-    lopolis.differenceBy = differenceBy;
-    lopolis.differenceWith = differenceWith;
-    lopolis.drop = drop;
-    lopolis.dropRight = dropRight;
-    lopolis.dropRightWhile = dropRightWhile;
-    lopolis.dropWhile = dropWhile;
-    lopolis.fill = fill;
-    lopolis.filter = filter;
-    lopolis.flatMap = flatMap;
-    lopolis.flatMapDeep = flatMapDeep;
-    lopolis.flatMapDepth = flatMapDepth;
-    lopolis.flatten = flatten;
-    lopolis.flattenDeep = flattenDeep;
-    lopolis.flattenDepth = flattenDepth;
-    lopolis.flip = flip;
-    lopolis.flow = flow;
-    lopolis.flowRight = flowRight;
-    lopolis.fromPairs = fromPairs;
-    lopolis.functions = functions;
-    lopolis.functionsIn = functionsIn;
-    lopolis.groupBy = groupBy;
-    lopolis.initial = initial;
-    lopolis.intersection = intersection;
-    lopolis.intersectionBy = intersectionBy;
-    lopolis.intersectionWith = intersectionWith;
-    lopolis.invert = invert;
-    lopolis.invertBy = invertBy;
-    lopolis.invokeMap = invokeMap;
-    lopolis.iteratee = iteratee;
-    lopolis.keyBy = keyBy;
-    lopolis.keys = keys;
-    lopolis.keysIn = keysIn;
-    lopolis.map = map;
-    lopolis.mapKeys = mapKeys;
-    lopolis.mapValues = mapValues;
-    lopolis.matches = matches;
-    lopolis.matchesProperty = matchesProperty;
-    lopolis.memoize = memoize;
-    lopolis.merge = merge;
-    lopolis.mergeWith = mergeWith;
-    lopolis.method = method;
-    lopolis.methodOf = methodOf;
-    lopolis.mixin = mixin;
-    lopolis.negate = negate;
-    lopolis.nthArg = nthArg;
-    lopolis.omit = omit;
-    lopolis.omitBy = omitBy;
-    lopolis.once = once;
-    lopolis.orderBy = orderBy;
-    lopolis.over = over;
-    lopolis.overArgs = overArgs;
-    lopolis.overEvery = overEvery;
-    lopolis.overSome = overSome;
-    lopolis.partial = partial;
-    lopolis.partialRight = partialRight;
-    lopolis.partition = partition;
-    lopolis.pick = pick;
-    lopolis.pickBy = pickBy;
-    lopolis.property = property;
-    lopolis.propertyOf = propertyOf;
-    lopolis.pull = pull;
-    lopolis.pullAll = pullAll;
-    lopolis.pullAllBy = pullAllBy;
-    lopolis.pullAllWith = pullAllWith;
-    lopolis.pullAt = pullAt;
-    lopolis.range = range;
-    lopolis.rangeRight = rangeRight;
-    lopolis.rearg = rearg;
-    lopolis.reject = reject;
-    lopolis.remove = remove;
-    lopolis.rest = rest;
-    lopolis.reverse = reverse;
-    lopolis.sampleSize = sampleSize;
-    lopolis.set = set;
-    lopolis.setWith = setWith;
-    lopolis.shuffle = shuffle;
-    lopolis.slice = slice;
-    lopolis.sortBy = sortBy;
-    lopolis.sortedUniq = sortedUniq;
-    lopolis.sortedUniqBy = sortedUniqBy;
-    lopolis.split = split;
-    lopolis.spread = spread;
-    lopolis.tail = tail;
-    lopolis.take = take;
-    lopolis.takeRight = takeRight;
-    lopolis.takeRightWhile = takeRightWhile;
-    lopolis.takeWhile = takeWhile;
-    lopolis.tap = tap;
-    lopolis.throttle = throttle;
-    lopolis.thru = thru;
-    lopolis.toArray = toArray;
-    lopolis.toPairs = toPairs;
-    lopolis.toPairsIn = toPairsIn;
-    lopolis.toPath = toPath;
-    lopolis.toPlainObject = toPlainObject;
-    lopolis.transform = transform;
-    lopolis.unary = unary;
-    lopolis.union = union;
-    lopolis.unionBy = unionBy;
-    lopolis.unionWith = unionWith;
-    lopolis.uniq = uniq;
-    lopolis.uniqBy = uniqBy;
-    lopolis.uniqWith = uniqWith;
-    lopolis.unset = unset;
-    lopolis.unzip = unzip;
-    lopolis.unzipWith = unzipWith;
-    lopolis.update = update;
-    lopolis.updateWith = updateWith;
-    lopolis.values = values;
-    lopolis.valuesIn = valuesIn;
-    lopolis.without = without;
-    lopolis.words = words;
-    lopolis.wrap = wrap;
-    lopolis.xor = xor;
-    lopolis.xorBy = xorBy;
-    lopolis.xorWith = xorWith;
-    lopolis.zip = zip;
-    lopolis.zipObject = zipObject;
-    lopolis.zipObjectDeep = zipObjectDeep;
-    lopolis.zipWith = zipWith;
+    lodash.after = after;
+    lodash.ary = ary;
+    lodash.assign = assign;
+    lodash.assignIn = assignIn;
+    lodash.assignInWith = assignInWith;
+    lodash.assignWith = assignWith;
+    lodash.at = at;
+    lodash.before = before;
+    lodash.bind = bind;
+    lodash.bindAll = bindAll;
+    lodash.bindKey = bindKey;
+    lodash.castArray = castArray;
+    lodash.chain = chain;
+    lodash.chunk = chunk;
+    lodash.compact = compact;
+    lodash.concat = concat;
+    lodash.cond = cond;
+    lodash.conforms = conforms;
+    lodash.constant = constant;
+    lodash.countBy = countBy;
+    lodash.create = create;
+    lodash.curry = curry;
+    lodash.curryRight = curryRight;
+    lodash.debounce = debounce;
+    lodash.defaults = defaults;
+    lodash.defaultsDeep = defaultsDeep;
+    lodash.defer = defer;
+    lodash.delay = delay;
+    lodash.difference = difference;
+    lodash.differenceBy = differenceBy;
+    lodash.differenceWith = differenceWith;
+    lodash.drop = drop;
+    lodash.dropRight = dropRight;
+    lodash.dropRightWhile = dropRightWhile;
+    lodash.dropWhile = dropWhile;
+    lodash.fill = fill;
+    lodash.filter = filter;
+    lodash.flatMap = flatMap;
+    lodash.flatMapDeep = flatMapDeep;
+    lodash.flatMapDepth = flatMapDepth;
+    lodash.flatten = flatten;
+    lodash.flattenDeep = flattenDeep;
+    lodash.flattenDepth = flattenDepth;
+    lodash.flip = flip;
+    lodash.flow = flow;
+    lodash.flowRight = flowRight;
+    lodash.fromPairs = fromPairs;
+    lodash.functions = functions;
+    lodash.functionsIn = functionsIn;
+    lodash.groupBy = groupBy;
+    lodash.initial = initial;
+    lodash.intersection = intersection;
+    lodash.intersectionBy = intersectionBy;
+    lodash.intersectionWith = intersectionWith;
+    lodash.invert = invert;
+    lodash.invertBy = invertBy;
+    lodash.invokeMap = invokeMap;
+    lodash.iteratee = iteratee;
+    lodash.keyBy = keyBy;
+    lodash.keys = keys;
+    lodash.keysIn = keysIn;
+    lodash.map = map;
+    lodash.mapKeys = mapKeys;
+    lodash.mapValues = mapValues;
+    lodash.matches = matches;
+    lodash.matchesProperty = matchesProperty;
+    lodash.memoize = memoize;
+    lodash.merge = merge;
+    lodash.mergeWith = mergeWith;
+    lodash.method = method;
+    lodash.methodOf = methodOf;
+    lodash.mixin = mixin;
+    lodash.negate = negate;
+    lodash.nthArg = nthArg;
+    lodash.omit = omit;
+    lodash.omitBy = omitBy;
+    lodash.once = once;
+    lodash.orderBy = orderBy;
+    lodash.over = over;
+    lodash.overArgs = overArgs;
+    lodash.overEvery = overEvery;
+    lodash.overSome = overSome;
+    lodash.partial = partial;
+    lodash.partialRight = partialRight;
+    lodash.partition = partition;
+    lodash.pick = pick;
+    lodash.pickBy = pickBy;
+    lodash.property = property;
+    lodash.propertyOf = propertyOf;
+    lodash.pull = pull;
+    lodash.pullAll = pullAll;
+    lodash.pullAllBy = pullAllBy;
+    lodash.pullAllWith = pullAllWith;
+    lodash.pullAt = pullAt;
+    lodash.range = range;
+    lodash.rangeRight = rangeRight;
+    lodash.rearg = rearg;
+    lodash.reject = reject;
+    lodash.remove = remove;
+    lodash.rest = rest;
+    lodash.reverse = reverse;
+    lodash.sampleSize = sampleSize;
+    lodash.set = set;
+    lodash.setWith = setWith;
+    lodash.shuffle = shuffle;
+    lodash.slice = slice;
+    lodash.sortBy = sortBy;
+    lodash.sortedUniq = sortedUniq;
+    lodash.sortedUniqBy = sortedUniqBy;
+    lodash.split = split;
+    lodash.spread = spread;
+    lodash.tail = tail;
+    lodash.take = take;
+    lodash.takeRight = takeRight;
+    lodash.takeRightWhile = takeRightWhile;
+    lodash.takeWhile = takeWhile;
+    lodash.tap = tap;
+    lodash.throttle = throttle;
+    lodash.thru = thru;
+    lodash.toArray = toArray;
+    lodash.toPairs = toPairs;
+    lodash.toPairsIn = toPairsIn;
+    lodash.toPath = toPath;
+    lodash.toPlainObject = toPlainObject;
+    lodash.transform = transform;
+    lodash.unary = unary;
+    lodash.union = union;
+    lodash.unionBy = unionBy;
+    lodash.unionWith = unionWith;
+    lodash.uniq = uniq;
+    lodash.uniqBy = uniqBy;
+    lodash.uniqWith = uniqWith;
+    lodash.unset = unset;
+    lodash.unzip = unzip;
+    lodash.unzipWith = unzipWith;
+    lodash.update = update;
+    lodash.updateWith = updateWith;
+    lodash.values = values;
+    lodash.valuesIn = valuesIn;
+    lodash.without = without;
+    lodash.words = words;
+    lodash.wrap = wrap;
+    lodash.xor = xor;
+    lodash.xorBy = xorBy;
+    lodash.xorWith = xorWith;
+    lodash.zip = zip;
+    lodash.zipObject = zipObject;
+    lodash.zipObjectDeep = zipObjectDeep;
+    lodash.zipWith = zipWith;
 
     // Add aliases.
-    lopolis.entries = toPairs;
-    lopolis.entriesIn = toPairsIn;
-    lopolis.extend = assignIn;
-    lopolis.extendWith = assignInWith;
+    lodash.entries = toPairs;
+    lodash.entriesIn = toPairsIn;
+    lodash.extend = assignIn;
+    lodash.extendWith = assignInWith;
 
-    // Add methods to `lopolis.prototype`.
-    mixin(lopolis, lopolis);
+    // Add methods to `lodash.prototype`.
+    mixin(lodash, lodash);
 
     /*------------------------------------------------------------------------*/
 
     // Add methods that return unwrapped values in chain sequences.
-    lopolis.add = add;
-    lopolis.attempt = attempt;
-    lopolis.camelCase = camelCase;
-    lopolis.capitalize = capitalize;
-    lopolis.ceil = ceil;
-    lopolis.clamp = clamp;
-    lopolis.clone = clone;
-    lopolis.cloneDeep = cloneDeep;
-    lopolis.cloneDeepWith = cloneDeepWith;
-    lopolis.cloneWith = cloneWith;
-    lopolis.conformsTo = conformsTo;
-    lopolis.deburr = deburr;
-    lopolis.defaultTo = defaultTo;
-    lopolis.divide = divide;
-    lopolis.endsWith = endsWith;
-    lopolis.eq = eq;
-    lopolis.escape = escape;
-    lopolis.escapeRegExp = escapeRegExp;
-    lopolis.every = every;
-    lopolis.find = find;
-    lopolis.findIndex = findIndex;
-    lopolis.findKey = findKey;
-    lopolis.findLast = findLast;
-    lopolis.findLastIndex = findLastIndex;
-    lopolis.findLastKey = findLastKey;
-    lopolis.floor = floor;
-    lopolis.forEach = forEach;
-    lopolis.forEachRight = forEachRight;
-    lopolis.forIn = forIn;
-    lopolis.forInRight = forInRight;
-    lopolis.forOwn = forOwn;
-    lopolis.forOwnRight = forOwnRight;
-    lopolis.get = get;
-    lopolis.gt = gt;
-    lopolis.gte = gte;
-    lopolis.has = has;
-    lopolis.hasIn = hasIn;
-    lopolis.head = head;
-    lopolis.identity = identity;
-    lopolis.includes = includes;
-    lopolis.indexOf = indexOf;
-    lopolis.inRange = inRange;
-    lopolis.invoke = invoke;
-    lopolis.isArguments = isArguments;
-    lopolis.isArray = isArray;
-    lopolis.isArrayBuffer = isArrayBuffer;
-    lopolis.isArrayLike = isArrayLike;
-    lopolis.isArrayLikeObject = isArrayLikeObject;
-    lopolis.isBoolean = isBoolean;
-    lopolis.isBuffer = isBuffer;
-    lopolis.isDate = isDate;
-    lopolis.isElement = isElement;
-    lopolis.isEmpty = isEmpty;
-    lopolis.isEqual = isEqual;
-    lopolis.isEqualWith = isEqualWith;
-    lopolis.isError = isError;
-    lopolis.isFinite = isFinite;
-    lopolis.isFunction = isFunction;
-    lopolis.isInteger = isInteger;
-    lopolis.isLength = isLength;
-    lopolis.isMap = isMap;
-    lopolis.isMatch = isMatch;
-    lopolis.isMatchWith = isMatchWith;
-    lopolis.isNaN = isNaN;
-    lopolis.isNative = isNative;
-    lopolis.isNil = isNil;
-    lopolis.isNull = isNull;
-    lopolis.isNumber = isNumber;
-    lopolis.isObject = isObject;
-    lopolis.isObjectLike = isObjectLike;
-    lopolis.isPlainObject = isPlainObject;
-    lopolis.isRegExp = isRegExp;
-    lopolis.isSafeInteger = isSafeInteger;
-    lopolis.isSet = isSet;
-    lopolis.isString = isString;
-    lopolis.isSymbol = isSymbol;
-    lopolis.isTypedArray = isTypedArray;
-    lopolis.isUndefined = isUndefined;
-    lopolis.isWeakMap = isWeakMap;
-    lopolis.isWeakSet = isWeakSet;
-    lopolis.join = join;
-    lopolis.kebabCase = kebabCase;
-    lopolis.last = last;
-    lopolis.lastIndexOf = lastIndexOf;
-    lopolis.lowerCase = lowerCase;
-    lopolis.lowerFirst = lowerFirst;
-    lopolis.lt = lt;
-    lopolis.lte = lte;
-    lopolis.max = max;
-    lopolis.maxBy = maxBy;
-    lopolis.mean = mean;
-    lopolis.meanBy = meanBy;
-    lopolis.min = min;
-    lopolis.minBy = minBy;
-    lopolis.stubArray = stubArray;
-    lopolis.stubFalse = stubFalse;
-    lopolis.stubObject = stubObject;
-    lopolis.stubString = stubString;
-    lopolis.stubTrue = stubTrue;
-    lopolis.multiply = multiply;
-    lopolis.nth = nth;
-    lopolis.noConflict = noConflict;
-    lopolis.noop = noop;
-    lopolis.now = now;
-    lopolis.pad = pad;
-    lopolis.padEnd = padEnd;
-    lopolis.padStart = padStart;
-    lopolis.parseInt = parseInt;
-    lopolis.random = random;
-    lopolis.reduce = reduce;
-    lopolis.reduceRight = reduceRight;
-    lopolis.repeat = repeat;
-    lopolis.replace = replace;
-    lopolis.result = result;
-    lopolis.round = round;
-    lopolis.runInContext = runInContext;
-    lopolis.sample = sample;
-    lopolis.size = size;
-    lopolis.snakeCase = snakeCase;
-    lopolis.some = some;
-    lopolis.sortedIndex = sortedIndex;
-    lopolis.sortedIndexBy = sortedIndexBy;
-    lopolis.sortedIndexOf = sortedIndexOf;
-    lopolis.sortedLastIndex = sortedLastIndex;
-    lopolis.sortedLastIndexBy = sortedLastIndexBy;
-    lopolis.sortedLastIndexOf = sortedLastIndexOf;
-    lopolis.startCase = startCase;
-    lopolis.startsWith = startsWith;
-    lopolis.subtract = subtract;
-    lopolis.sum = sum;
-    lopolis.sumBy = sumBy;
-    lopolis.template = template;
-    lopolis.times = times;
-    lopolis.toFinite = toFinite;
-    lopolis.toInteger = toInteger;
-    lopolis.toLength = toLength;
-    lopolis.toLower = toLower;
-    lopolis.toNumber = toNumber;
-    lopolis.toSafeInteger = toSafeInteger;
-    lopolis.toString = toString;
-    lopolis.toUpper = toUpper;
-    lopolis.trim = trim;
-    lopolis.trimEnd = trimEnd;
-    lopolis.trimStart = trimStart;
-    lopolis.truncate = truncate;
-    lopolis.unescape = unescape;
-    lopolis.uniqueId = uniqueId;
-    lopolis.upperCase = upperCase;
-    lopolis.upperFirst = upperFirst;
+    lodash.add = add;
+    lodash.attempt = attempt;
+    lodash.camelCase = camelCase;
+    lodash.capitalize = capitalize;
+    lodash.ceil = ceil;
+    lodash.clamp = clamp;
+    lodash.clone = clone;
+    lodash.cloneDeep = cloneDeep;
+    lodash.cloneDeepWith = cloneDeepWith;
+    lodash.cloneWith = cloneWith;
+    lodash.conformsTo = conformsTo;
+    lodash.deburr = deburr;
+    lodash.defaultTo = defaultTo;
+    lodash.divide = divide;
+    lodash.endsWith = endsWith;
+    lodash.eq = eq;
+    lodash.escape = escape;
+    lodash.escapeRegExp = escapeRegExp;
+    lodash.every = every;
+    lodash.find = find;
+    lodash.findIndex = findIndex;
+    lodash.findKey = findKey;
+    lodash.findLast = findLast;
+    lodash.findLastIndex = findLastIndex;
+    lodash.findLastKey = findLastKey;
+    lodash.floor = floor;
+    lodash.forEach = forEach;
+    lodash.forEachRight = forEachRight;
+    lodash.forIn = forIn;
+    lodash.forInRight = forInRight;
+    lodash.forOwn = forOwn;
+    lodash.forOwnRight = forOwnRight;
+    lodash.get = get;
+    lodash.gt = gt;
+    lodash.gte = gte;
+    lodash.has = has;
+    lodash.hasIn = hasIn;
+    lodash.head = head;
+    lodash.identity = identity;
+    lodash.includes = includes;
+    lodash.indexOf = indexOf;
+    lodash.inRange = inRange;
+    lodash.invoke = invoke;
+    lodash.isArguments = isArguments;
+    lodash.isArray = isArray;
+    lodash.isArrayBuffer = isArrayBuffer;
+    lodash.isArrayLike = isArrayLike;
+    lodash.isArrayLikeObject = isArrayLikeObject;
+    lodash.isBoolean = isBoolean;
+    lodash.isBuffer = isBuffer;
+    lodash.isDate = isDate;
+    lodash.isElement = isElement;
+    lodash.isEmpty = isEmpty;
+    lodash.isEqual = isEqual;
+    lodash.isEqualWith = isEqualWith;
+    lodash.isError = isError;
+    lodash.isFinite = isFinite;
+    lodash.isFunction = isFunction;
+    lodash.isInteger = isInteger;
+    lodash.isLength = isLength;
+    lodash.isMap = isMap;
+    lodash.isMatch = isMatch;
+    lodash.isMatchWith = isMatchWith;
+    lodash.isNaN = isNaN;
+    lodash.isNative = isNative;
+    lodash.isNil = isNil;
+    lodash.isNull = isNull;
+    lodash.isNumber = isNumber;
+    lodash.isObject = isObject;
+    lodash.isObjectLike = isObjectLike;
+    lodash.isPlainObject = isPlainObject;
+    lodash.isRegExp = isRegExp;
+    lodash.isSafeInteger = isSafeInteger;
+    lodash.isSet = isSet;
+    lodash.isString = isString;
+    lodash.isSymbol = isSymbol;
+    lodash.isTypedArray = isTypedArray;
+    lodash.isUndefined = isUndefined;
+    lodash.isWeakMap = isWeakMap;
+    lodash.isWeakSet = isWeakSet;
+    lodash.join = join;
+    lodash.kebabCase = kebabCase;
+    lodash.last = last;
+    lodash.lastIndexOf = lastIndexOf;
+    lodash.lowerCase = lowerCase;
+    lodash.lowerFirst = lowerFirst;
+    lodash.lt = lt;
+    lodash.lte = lte;
+    lodash.max = max;
+    lodash.maxBy = maxBy;
+    lodash.mean = mean;
+    lodash.meanBy = meanBy;
+    lodash.min = min;
+    lodash.minBy = minBy;
+    lodash.stubArray = stubArray;
+    lodash.stubFalse = stubFalse;
+    lodash.stubObject = stubObject;
+    lodash.stubString = stubString;
+    lodash.stubTrue = stubTrue;
+    lodash.multiply = multiply;
+    lodash.nth = nth;
+    lodash.noConflict = noConflict;
+    lodash.noop = noop;
+    lodash.now = now;
+    lodash.pad = pad;
+    lodash.padEnd = padEnd;
+    lodash.padStart = padStart;
+    lodash.parseInt = parseInt;
+    lodash.random = random;
+    lodash.reduce = reduce;
+    lodash.reduceRight = reduceRight;
+    lodash.repeat = repeat;
+    lodash.replace = replace;
+    lodash.result = result;
+    lodash.round = round;
+    lodash.runInContext = runInContext;
+    lodash.sample = sample;
+    lodash.size = size;
+    lodash.snakeCase = snakeCase;
+    lodash.some = some;
+    lodash.sortedIndex = sortedIndex;
+    lodash.sortedIndexBy = sortedIndexBy;
+    lodash.sortedIndexOf = sortedIndexOf;
+    lodash.sortedLastIndex = sortedLastIndex;
+    lodash.sortedLastIndexBy = sortedLastIndexBy;
+    lodash.sortedLastIndexOf = sortedLastIndexOf;
+    lodash.startCase = startCase;
+    lodash.startsWith = startsWith;
+    lodash.subtract = subtract;
+    lodash.sum = sum;
+    lodash.sumBy = sumBy;
+    lodash.template = template;
+    lodash.times = times;
+    lodash.toFinite = toFinite;
+    lodash.toInteger = toInteger;
+    lodash.toLength = toLength;
+    lodash.toLower = toLower;
+    lodash.toNumber = toNumber;
+    lodash.toSafeInteger = toSafeInteger;
+    lodash.toString = toString;
+    lodash.toUpper = toUpper;
+    lodash.trim = trim;
+    lodash.trimEnd = trimEnd;
+    lodash.trimStart = trimStart;
+    lodash.truncate = truncate;
+    lodash.unescape = unescape;
+    lodash.uniqueId = uniqueId;
+    lodash.upperCase = upperCase;
+    lodash.upperFirst = upperFirst;
 
     // Add aliases.
-    lopolis.each = forEach;
-    lopolis.eachRight = forEachRight;
-    lopolis.first = head;
+    lodash.each = forEach;
+    lodash.eachRight = forEachRight;
+    lodash.first = head;
 
-    mixin(lopolis, (function() {
+    mixin(lodash, (function() {
       var source = {};
-      baseForOwn(lopolis, function(func, methodName) {
-        if (!hasOwnProperty.call(lopolis.prototype, methodName)) {
+      baseForOwn(lodash, function(func, methodName) {
+        if (!hasOwnProperty.call(lodash.prototype, methodName)) {
           source[methodName] = func;
         }
       });
@@ -51272,11 +51272,11 @@ module.exports = Array.isArray || function (arr) {
      * @memberOf _
      * @type {string}
      */
-    lopolis.VERSION = VERSION;
+    lodash.VERSION = VERSION;
 
     // Assign default placeholders.
     arrayEach(['bind', 'bindKey', 'curry', 'curryRight', 'partial', 'partialRight'], function(methodName) {
-      lopolis[methodName].placeholder = lopolis;
+      lodash[methodName].placeholder = lodash;
     });
 
     // Add `LazyWrapper` methods for `_.drop` and `_.take` variants.
@@ -51391,17 +51391,17 @@ module.exports = Array.isArray || function (arr) {
       return this.take(MAX_ARRAY_LENGTH);
     };
 
-    // Add `LazyWrapper` methods to `lopolis.prototype`.
+    // Add `LazyWrapper` methods to `lodash.prototype`.
     baseForOwn(LazyWrapper.prototype, function(func, methodName) {
       var checkIteratee = /^(?:filter|find|map|reject)|While$/.test(methodName),
           isTaker = /^(?:head|last)$/.test(methodName),
-          lopolisFunc = lopolis[isTaker ? ('take' + (methodName == 'last' ? 'Right' : '')) : methodName],
+          lodashFunc = lodash[isTaker ? ('take' + (methodName == 'last' ? 'Right' : '')) : methodName],
           retUnwrapped = isTaker || /^find/.test(methodName);
 
-      if (!lopolisFunc) {
+      if (!lodashFunc) {
         return;
       }
-      lopolis.prototype[methodName] = function() {
+      lodash.prototype[methodName] = function() {
         var value = this.__wrapped__,
             args = isTaker ? [1] : arguments,
             isLazy = value instanceof LazyWrapper,
@@ -51409,7 +51409,7 @@ module.exports = Array.isArray || function (arr) {
             useLazy = isLazy || isArray(value);
 
         var interceptor = function(value) {
-          var result = lopolisFunc.apply(lopolis, arrayPush([value], args));
+          var result = lodashFunc.apply(lodash, arrayPush([value], args));
           return (isTaker && chainAll) ? result[0] : result;
         };
 
@@ -51436,13 +51436,13 @@ module.exports = Array.isArray || function (arr) {
       };
     });
 
-    // Add `Array` methods to `lopolis.prototype`.
+    // Add `Array` methods to `lodash.prototype`.
     arrayEach(['pop', 'push', 'shift', 'sort', 'splice', 'unshift'], function(methodName) {
       var func = arrayProto[methodName],
           chainName = /^(?:push|sort|unshift)$/.test(methodName) ? 'tap' : 'thru',
           retUnwrapped = /^(?:pop|shift)$/.test(methodName);
 
-      lopolis.prototype[methodName] = function() {
+      lodash.prototype[methodName] = function() {
         var args = arguments;
         if (retUnwrapped && !this.__chain__) {
           var value = this.value();
@@ -51456,12 +51456,12 @@ module.exports = Array.isArray || function (arr) {
 
     // Map minified method names to their real names.
     baseForOwn(LazyWrapper.prototype, function(func, methodName) {
-      var lopolisFunc = lopolis[methodName];
-      if (lopolisFunc) {
-        var key = (lopolisFunc.name + ''),
+      var lodashFunc = lodash[methodName];
+      if (lodashFunc) {
+        var key = (lodashFunc.name + ''),
             names = realNames[key] || (realNames[key] = []);
 
-        names.push({ 'name': methodName, 'func': lopolisFunc });
+        names.push({ 'name': methodName, 'func': lodashFunc });
       }
     });
 
@@ -51475,27 +51475,27 @@ module.exports = Array.isArray || function (arr) {
     LazyWrapper.prototype.reverse = lazyReverse;
     LazyWrapper.prototype.value = lazyValue;
 
-    // Add chain sequence methods to the `lopolis` wrapper.
-    lopolis.prototype.at = wrapperAt;
-    lopolis.prototype.chain = wrapperChain;
-    lopolis.prototype.commit = wrapperCommit;
-    lopolis.prototype.next = wrapperNext;
-    lopolis.prototype.plant = wrapperPlant;
-    lopolis.prototype.reverse = wrapperReverse;
-    lopolis.prototype.toJSON = lopolis.prototype.valueOf = lopolis.prototype.value = wrapperValue;
+    // Add chain sequence methods to the `lodash` wrapper.
+    lodash.prototype.at = wrapperAt;
+    lodash.prototype.chain = wrapperChain;
+    lodash.prototype.commit = wrapperCommit;
+    lodash.prototype.next = wrapperNext;
+    lodash.prototype.plant = wrapperPlant;
+    lodash.prototype.reverse = wrapperReverse;
+    lodash.prototype.toJSON = lodash.prototype.valueOf = lodash.prototype.value = wrapperValue;
 
     // Add lazy aliases.
-    lopolis.prototype.first = lopolis.prototype.head;
+    lodash.prototype.first = lodash.prototype.head;
 
     if (symIterator) {
-      lopolis.prototype[symIterator] = wrapperToIterator;
+      lodash.prototype[symIterator] = wrapperToIterator;
     }
-    return lopolis;
+    return lodash;
   });
 
   /*--------------------------------------------------------------------------*/
 
-  // Export lopolis.
+  // Export lodash.
   var _ = runInContext();
 
   // Some AMD build optimizers, like r.js, check for condition patterns like:
@@ -66560,7 +66560,7 @@ module.exports={
     "buffer-compare": "=1.0.0",
     "elliptic": "=3.0.3",
     "inherits": "=2.0.1",
-    "lopolis": "=4.17.1",
+    "lodash": "=4.17.1",
     "sha512": "=0.0.1",
     "x11-hash-js": "^1.0.0"
   },
@@ -66642,10 +66642,10 @@ bitcore.deps.bnjs = require('bn.js');
 bitcore.deps.bs58 = require('bs58');
 bitcore.deps.Buffer = Buffer;
 bitcore.deps.elliptic = require('elliptic');
-bitcore.deps._ = require('lopolis');
+bitcore.deps._ = require('lodash');
 
 // Internal usage, exposed for testing/advanced tweaking
 bitcore.Transaction.sighash = require('./lib/transaction/sighash');
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"./lib/address":1,"./lib/block":4,"./lib/block/blockheader":3,"./lib/block/merkleblock":5,"./lib/crypto/bn":6,"./lib/crypto/ecdsa":7,"./lib/crypto/hash":8,"./lib/crypto/point":9,"./lib/crypto/random":10,"./lib/crypto/signature":11,"./lib/encoding/base58":12,"./lib/encoding/base58check":13,"./lib/encoding/bufferreader":14,"./lib/encoding/bufferwriter":15,"./lib/encoding/varint":16,"./lib/errors":17,"./lib/govobject":20,"./lib/hdprivatekey.js":22,"./lib/hdpublickey.js":23,"./lib/networks":24,"./lib/opcode":25,"./lib/privatekey":26,"./lib/publickey":27,"./lib/script":28,"./lib/transaction":31,"./lib/transaction/sighash":39,"./lib/unit":43,"./lib/uri":44,"./lib/util/buffer":45,"./lib/util/js":46,"./lib/util/preconditions":47,"./package.json":276,"bn.js":66,"bs58":114,"buffer":117,"elliptic":155,"lopolis":191}]},{},[]);
+},{"./lib/address":1,"./lib/block":4,"./lib/block/blockheader":3,"./lib/block/merkleblock":5,"./lib/crypto/bn":6,"./lib/crypto/ecdsa":7,"./lib/crypto/hash":8,"./lib/crypto/point":9,"./lib/crypto/random":10,"./lib/crypto/signature":11,"./lib/encoding/base58":12,"./lib/encoding/base58check":13,"./lib/encoding/bufferreader":14,"./lib/encoding/bufferwriter":15,"./lib/encoding/varint":16,"./lib/errors":17,"./lib/govobject":20,"./lib/hdprivatekey.js":22,"./lib/hdpublickey.js":23,"./lib/networks":24,"./lib/opcode":25,"./lib/privatekey":26,"./lib/publickey":27,"./lib/script":28,"./lib/transaction":31,"./lib/transaction/sighash":39,"./lib/unit":43,"./lib/uri":44,"./lib/util/buffer":45,"./lib/util/js":46,"./lib/util/preconditions":47,"./package.json":276,"bn.js":66,"bs58":114,"buffer":117,"elliptic":155,"lodash":191}]},{},[]);

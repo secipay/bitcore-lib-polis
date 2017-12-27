@@ -1,6 +1,6 @@
 'use strict';
 /* jshint unused: false */
-var _ = require('lopolis');
+var _ = require('lodash');
 var assert = require('assert');
 var should = require('chai').should();
 var expect = require('chai').expect;
