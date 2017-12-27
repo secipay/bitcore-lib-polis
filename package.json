@@ -106,7 +106,7 @@
     "x11-hash-js": "^1.0.0"
   },
   "devDependencies": {
-    "bitcore-build-polis": "polispay/bitcore-build-polis",
+    "bitcore-build-polis": "github:polispay/bitcore-build-polis",
     "browserify": "latest",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
