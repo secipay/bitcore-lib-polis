@@ -1,4 +1,4 @@
-# Bitcore v0.15.0
+# Bitcore v0.15
 
 ## Principles
 
@@ -14,6 +14,9 @@ To get started, just `npm install bitcore` or `bower install bitcore`.
 * [Using Different Networks](networks.md)
 * [Private Keys](privatekey.md) and [Public Keys](publickey.md)
 * [Hierarchically-derived Private and Public Keys](hierarchical.md)
+
+## DASH Governance Objects
+* [Governance Object / Proposal](govobject/govobject.md)
 
 ## Payment Handling
 * [Using Different Units](unit.md)
@@ -102,4 +105,3 @@ peer.on('inv', function(message) {
 
 peer.connect();
 ```
-
