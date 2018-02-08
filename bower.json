@@ -2,7 +2,7 @@
   "name": "bitcore-lib-polis",
   "main": "./bitcore-lib-polis.min.js",
   "version": "0.15.2",
-  "homepage": "https://github.com/polisevo/bitcore-lib-polis",
+  "homepage": "https://github.com/polispay/bitcore-lib-polis",
   "authors": [
     "Dash", "BitPay, Inc."
   ],
